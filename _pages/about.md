@@ -1,11 +1,8 @@
 ---
 layout: page
-title: About Me
+title: CV
+url: github.com
+description: my professional experience to date
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
