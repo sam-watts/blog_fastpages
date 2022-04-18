@@ -16,17 +16,6 @@
   
 
   
-      ,"page1": {
-          "title": "CV",
-          "content": "",
-          "url": "https://sam-watts.github.io/blog/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
-
-  
 
   
   
@@ -48,7 +37,7 @@
   
 
   
-      ,"page10": {
+      ,"page9": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://sam-watts.github.io/blog/robots.txt",
