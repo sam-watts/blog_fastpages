@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>RecSys 2022 - My Top 5 Papers | Sam Watts</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="RecSys 2022 - My Top 5 Papers" />
+<meta name="author" content="Sam Watts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Highlights from the conference" />
+<meta property="og:description" content="Highlights from the conference" />
+<link rel="canonical" href="https://sam-watts.github.io/blog/ml/recsys/2022/10/10/recys-2022-top-5.html" />
+<meta property="og:url" content="https://sam-watts.github.io/blog/ml/recsys/2022/10/10/recys-2022-top-5.html" />
+<meta property="og:site_name" content="Sam Watts" />
+<meta property="og:image" content="https://sam-watts.github.io/blog/images/2021-07-31-debugging-dockerized-ml-python/Recsys-OG.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-10T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sam-watts.github.io/blog/images/2021-07-31-debugging-dockerized-ml-python/Recsys-OG.png" />
+<meta property="twitter:title" content="RecSys 2022 - My Top 5 Papers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sam Watts"},"dateModified":"2022-10-10T00:00:00-05:00","datePublished":"2022-10-10T00:00:00-05:00","description":"Highlights from the conference","headline":"RecSys 2022 - My Top 5 Papers","image":"https://sam-watts.github.io/blog/images/2021-07-31-debugging-dockerized-ml-python/Recsys-OG.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://sam-watts.github.io/blog/ml/recsys/2022/10/10/recys-2022-top-5.html"},"url":"https://sam-watts.github.io/blog/ml/recsys/2022/10/10/recys-2022-top-5.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sam-watts.github.io/blog/feed.xml" title="Sam Watts" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Sam Watts</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/"></a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">RecSys 2022 - My Top 5 Papers</h1><p class="page-description">Highlights from the conference</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-10T00:00:00-05:00" itemprop="datePublished">
+        Oct 10, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Sam Watts</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#ml">ml</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#recsys">recsys</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#augmenting-netflix-search-with-in-session-adapted-recommendations">Augmenting Netflix Search with In-Session Adapted Recommendations</a></li>
+<li class="toc-entry toc-h1"><a href="#recommendation-as-language-processing-rlp-a-unified-pretrain-personalized-prompt--predict-paradigm-p5">Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt &amp; Predict Paradigm (P5)</a></li>
+<li class="toc-entry toc-h1"><a href="#towards-psychologically-grounded-dynamic-preference-models">Towards Psychologically-Grounded Dynamic Preference Models</a></li>
+<li class="toc-entry toc-h1"><a href="#reusable-self-attention-recommender-systems-in-fashion-industry-applications">Reusable Self-Attention Recommender Systems in Fashion Industry Applications</a></li>
+<li class="toc-entry toc-h1"><a href="#streaming-session-based-recommendation-when-graph-neural-networks-meet-the-neighborhood">Streaming Session-Based Recommendation: When Graph Neural Networks meet the Neighborhood</a></li>
+</ul><p>After reading papers from RecSys for several years, I was really happy to be able to (virtually) attend for the first time this year. If you haven’t heard of it, RecSys is the most important conference for new results in the field of recommender systems research.
+This was also my first academic conference of any kind! I found the mix of academic and industry talks really balanced each other out well - it was great to see exciting theory-driven ideas alongside real world implementation stories, with all the engineering problems that come with them.
+Below are the papers I found most interesting from the main conference, in no particular order. Links to the papers PDFs are included in the sub-titles.</p>
+
+<h1 id="augmenting-netflix-search-with-in-session-adapted-recommendations">
+<a class="anchor" href="#augmenting-netflix-search-with-in-session-adapted-recommendations" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://dl.acm.org/doi/pdf/10.1145/3523227.3547407">Augmenting Netflix Search with In-Session Adapted Recommendations</a>
+</h1>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/netflix_1.png" alt=""></p>
+
+<p>Based on user research, Netflix found that users typically fall into 3 categories when searching for content:</p>
+<ul>
+  <li>Fetch - the user knows exactly what they want, and generally enter a query for an exact film or TV show</li>
+  <li>Find - the user broadly knows the kind of thing they want to see, but it’s not a fully formed idea - eg. comedy movies</li>
+  <li>Explore - the user has no fixed idea of what they are looking for, and are open to suggestions</li>
+</ul>
+
+<p>Based on this, Netflix reasoned that there was an opportunity to present the “Explore” users with recommendations on the pre-search page. The key point is that these recommendations would need to take into account user interactions from the current session, to align with whatever they might be looking for at the current moment. These kind of recommendations are commonly referred to as “Anticipatory Search” or “Pre-search Recommendations”.</p>
+
+<p>The authors designed a model to provide recommendations for this use case. This model uses features such as historical user data, context about the user and the session, and well as raw sequences of in-session browsing interactions. Video metadata and embeddings are also used to provide information about the items that are interacted with.</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/netflix_2.png" alt=""></p>
+
+<p>The authors experimented with different types of deep architectures, including both dense and sparse features. This was coupled with the raw interaction sequence, which they modelled with different types of neural network modules that can accommodate sequence data - attention blocks, LSTM and GRU.</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/netflix_3.png" alt=""></p>
+
+<p>They pick out a specific example of how the model reacts to in-session browsing activity. The ranking of the recommendations is influenced by the titles browsed by the user, which they contend should result in a good experience for the user when they navigate to the search page.</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/netflix_4.png" alt=""></p>
+
+<p>No specifics are mentioned regarding which objectives are used to train the model, or how the model performs when tested online. In offline performance they see a 6% relative increase in ranking metrics against the current production model.
+I would be interested in hearing more about the cost-benefit tradeoff involved in deploying this model online, due to the large engineering challenge required to make real-time features available to the model at inference time.</p>
+
+<h1 id="recommendation-as-language-processing-rlp-a-unified-pretrain-personalized-prompt--predict-paradigm-p5">
+<a class="anchor" href="#recommendation-as-language-processing-rlp-a-unified-pretrain-personalized-prompt--predict-paradigm-p5" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://dl.acm.org/doi/pdf/10.1145/3523227.3546767">Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt &amp; Predict Paradigm (P5)</a>
+</h1>
+
+<p>This paper borrows heavily from recent advances in NLP models to create a multi-purpose model for different recommendation tasks.</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/t5.png" alt=""></p>
+
+<p>P5 is directly inspired by the influential T5 paper. T5 applies a unified approach to transfer learning, to effectively learn multiple tasks as part of a text-to-text framework. P5 applies these concepts to recommendation tasks, as shown below.</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/p5.png" alt=""></p>
+
+<p>The P5 framework allows for the use of prompt templates, which are filled with user interaction data and item metadata, to produce a fully text-based input based on the task described in the prompt. This means that all tasks can be learned simultaneously during pre-training.
+The authors present very promising results for this architecture compared to other state of the art models. If they can be replicated, this could lead to the use of more multi-purpose, pre-trained models in industry. I for one, look forward to becoming a rockstar prompt engineer! 🚀</p>
+
+<h1 id="towards-psychologically-grounded-dynamic-preference-models">
+<a class="anchor" href="#towards-psychologically-grounded-dynamic-preference-models" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://dl.acm.org/doi/pdf/10.1145/3523227.3546778">Towards Psychologically-Grounded Dynamic Preference Models</a>
+</h1>
+
+<p>One of the core assumptions in many recommender models is that user preferences are static. But what if a user’s preferences change due to the items we are showing the user with our recommender system? How could this feedback loop effect what a user wants over time? This paper focuses on a framework for formalising possible user preference changes due to human psychological effects.
+The best example included is the “Mere Exposure Effect” - which states that people are more likely to develop a preference for something that they are familiar with. This was first described by Robert Zajonc in the 60s - his experiment included nonsense words on the cover of a student newspaper. When tested, on average the students who read this paper rated the words they had been exposed to as more positive-sounding compared to other nonsense words.
+How better to explain this all, than a graph with a grumpy cat? 😻</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/psyc.png" alt=""></p>
+
+<p>The authors formalise the mere exposure effect applied to recommendations mathematically, as show on the left. A user’s initial preferences (πₜ) and items (ν) are both represented as vectors. In response to being recommended an item ν at time step t+1, the users preference moves from their starting preference vector, along the line the intersects the user’s baseline preference and the item vectors. This results in the updated preference vector, πₜ₊₁. The factor γ controls how far along this line the preferences move (where γ ϵ [0, 1]). The graph below the equation depicts this in a 2-dimensional preference space.
+The authors propose similar formulations for Operant Conditioning and Hedonic Adaptation, before including a section on simulations based on these ideas. This includes discussion on how recommenders may achieve different engagement scores in the case where user preferences are dynamic.
+The ideas in this paper feel some way from making it into most  industrial settings anytime soon - but a more holistic focus on the role platforms might be playing in moulding user preferences is definitely welcome.</p>
+
+<h1 id="reusable-self-attention-recommender-systems-in-fashion-industry-applications">
+<a class="anchor" href="#reusable-self-attention-recommender-systems-in-fashion-industry-applications" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://dl.acm.org/doi/pdf/10.1145/3523227.3547377">Reusable Self-Attention Recommender Systems in Fashion Industry Applications</a>
+</h1>
+
+<p>Continuing the trend of unifying models - here engineers at the fashion website Zalando present their work on creating a single recommender model architecture that can be reused for several tasks, using the now ever-present Transformer architecture.</p>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/zalando.png" alt=""></p>
+
+<p>The authors unified the training datasets previously fed into separate models, and used them to train a recommender architecture that can be re-used for 3 different tasks: outfit ranking, outfit recommendation, real-time and personalised outfit generation. For the different subtasks, small changes are made to the Transformer architecture, and boolean masking is used to hide labels not relevant to the use case the model is being trained for.
+The inclusion of contextual data also allows the model to work with semi-cold start users, who may have fewer significant interactions with items, as well as fully-cold start users with no item interactions, who can be predicted based on contextual data alone.
+The model is able to learn from different interaction types due to a one-hot encoding of the interaction type. In addition, a simple integer of days-since-interaction allows the model to balance long and short term interests. 
+In A/B testing the authors report increases in user engagement compared to the previous deployed algorithms of between 5–130%.</p>
+
+<h1 id="streaming-session-based-recommendation-when-graph-neural-networks-meet-the-neighborhood">
+<a class="anchor" href="#streaming-session-based-recommendation-when-graph-neural-networks-meet-the-neighborhood" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://dl.acm.org/doi/pdf/10.1145/3523227.3548485">Streaming Session-Based Recommendation: When Graph Neural Networks meet the Neighborhood</a>
+</h1>
+
+<p>I found this paper intriguing for the insight it gives into some methodology issues present in the recommender system literature. 
+A recent focus of the RecSys field has been session-based recommendations - providing recommendations to users using in-session signals. Several deep learning model architectures have been proposed to address this task. 
+The authors of this papers compared one of these complex approaches against some more simple baselines:</p>
+<ul>
+  <li>VSKNN+ - a session-based nearest neighbour approach. Finds past sessions that are similar to the current session. Items that appear in these similar sessions are used as recommendation candidates. The authors add an extension to the base VSKNN algorithm, that considers each user’s past sessions</li>
+  <li>SR+ - ”Sequential Rules”, a variation of association rule learning. A rule is created when an item p appears after item q in a session, where the weight of the rule is a function of the number of items between p and q in the interaction sequence. The authors again extend this method to consider each user’s past sessions</li>
+  <li>GAG - an approached based on a Graph Neural Network</li>
+</ul>
+
+<p><img src="/blog/images/2022-10-10-recys-2022-top-5/GAG.png" alt=""></p>
+
+<p>The final findings are shown in the table above, are that a hybrid approach (which simply combines the recommended items produced by VSKNN+ and SR+) performs better than GAG across all metrics and datasets the authors tested. Neither of these baselines were used as comparisons in the <a href="https://arxiv.org/pdf/2007.02747.pdf">original paper that proposed GAG</a>.</p>
+
+  </div><a class="u-url" href="/blog/ml/recsys/2022/10/10/recys-2022-top-5.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Mostly tech wanderings</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/sam-watts" target="_blank" title="sam-watts"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/swatts123" target="_blank" title="swatts123"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
