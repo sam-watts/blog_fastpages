@@ -7,6 +7,7 @@ categories: [ml, python]
 title: 🚢 Debugging for Dockerized ML applications in Python
 image: images/2021-07-31-debugging-dockerized-ml-python/Moby-logo.png
 badges: true
+comments: true
 ---
 
 Docker has become ubiquitous in ML applications in the last few years. It can enable easy collaboration between engineers with different hardware — as well as easing the transition from prototyping on personal laptops to compute clusters in production. On the flip side, it introduces an extra layer of complexity for engineers to work with when developing and maintaining productionised models.
